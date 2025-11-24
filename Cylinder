@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void checkCylinder(float r, float h);
+
+int main() {
+    float r, h;
+
+    printf("Enter radius and height of cylinder: ");
+    scanf("%f %f", &r, &h);
+
+    checkCylinder(r, h);
+
+    return 0;
+}
+
+void checkCylinder(float r, float h) {
+    float volume = 3.1416 * r * r * h;          // πr²h
+    float CSA = 2 * 3.1416 * r * h;             // 2πrh
+    float TSA = CSA + 2 * 3.1416 * r * r;       // CSA + 2πr²
+
+    printf("Volume of cylinder = %.2f\n", volume);
+    printf("Curved Surface Area (CSA) = %.2f\n", CSA);
+    printf("Total Surface Area (TSA) = %.2f\n", TSA);
+}
