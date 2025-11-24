@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void checkDivision(float a, float b);
+
+int main() 
+{
+    float a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &a, &b);   // use %f for floats
+
+    checkDivision(a, b);
+
+    return 0;
+}
+
+void checkDivision(float a, float b) 
+{
+    if (b != 0) {
+        float result = a / b;   // float division
+        printf("Division = %.2f\n", result);  // 2 decimal places 
+    } else {
+        printf("Error: Division by zero gives Undefined (infinity).\n");
+    }
+}
