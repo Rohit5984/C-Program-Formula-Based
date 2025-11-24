@@ -1,0 +1,26 @@
+#include <cstdio>
+
+void checkCuboid(float l, float b, float h);
+
+int main() 
+{
+    float l, b, h;
+
+    printf("Enter length, breadth, and height of cuboid: ");
+    scanf("%f %f %f", &l, &b, &h);
+
+    checkCuboid(l, b, h);
+
+    return 0;
+}
+
+void checkCuboid(float l, float b, float h) 
+{
+    float volume = l * b * h;
+    float TSA = 2 * (l * b + b * h + l * h);
+    float LSA = 2 * h * (l + b);
+
+    printf("Volume of cuboid = %.2f\n", volume);
+    printf("Total Surface Area (TSA) = %.2f\n", TSA);
+    printf("Lateral Surface Area (LSA) = %.2f\n", LSA);
+}
