@@ -1,0 +1,19 @@
+#include <cstdio>
+void checkSum(float a, float b);
+int main() 
+{
+    float a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &a, &b);
+
+    checkSum(a, b);
+
+    return 0;
+}
+
+void checkSum(float a, float b) 
+{
+    float s = a + b;
+    printf("Sum is %.2f\n", s);
+}
