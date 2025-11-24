@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void checkHemisphere(float r);
+
+int main() {
+    float r;
+
+    printf("Enter radius of hemisphere: ");
+    scanf("%f", &r);
+
+    checkHemisphere(r);
+
+    return 0;
+}
+
+void checkHemisphere(float r) {
+    float CSA = 2 * 3.1416 * r * r;             // 2πr²
+    float TSA = 3 * 3.1416 * r * r;             // 3πr²
+    float Volume = (2.0 / 3.0) * 3.1416 * r * r * r;  // (2/3)πr³
+
+    printf("Curved Surface Area (CSA) = %.2f\n", CSA);
+    printf("Total Surface Area (TSA) = %.2f\n", TSA);
+    printf("Volume of hemisphere = %.2f\n", Volume);
+}
