@@ -1,0 +1,21 @@
+#include <cstdio>
+void checkSquare(float side);
+int main() 
+{
+    float side;
+
+    printf("Enter side of square: ");
+    scanf("%f", &side);
+
+    checkSquare(side);
+
+    return 0;
+}
+void checkSquare(float side) 
+{
+    float perimeter = 4 * side;     
+    float area = side * side;       
+
+    printf("Perimeter of square = %.2f\n", perimeter);
+    printf("Area of square = %.2f\n", area);
+}
