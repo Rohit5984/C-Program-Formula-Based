@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void checkSphere(float r);
+
+int main() {
+    float r;
+
+    printf("Enter radius of sphere: ");
+    scanf("%f", &r);
+
+    checkSphere(r);
+
+    return 0;
+}
+
+void checkSphere(float r) {
+    float TSA = 4 * 3.1416 * r * r;             // 4πr²
+    float Volume = (4.0 / 3.0) * 3.1416 * r * r * r;  // (4/3)πr³
+
+    printf("Total Surface Area (TSA) = %.2f\n", TSA);
+    printf("Volume of sphere = %.2f\n", Volume);
+}
